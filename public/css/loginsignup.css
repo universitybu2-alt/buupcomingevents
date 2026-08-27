@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: url(/assets/maing.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: azure;
+    font-family: Arial, sans-serif;
+    /* Center everything */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* event logo */
+.event-logo {
+    display: block;
+    width: 150px;
+    height: 100px;
+    margin: 0 auto 15px;
+    border-radius: 100px;
+}
+/* Top description */
+.dis, .para {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    padding: 15px 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: rgb(28, 25, 223);
+}
+.dis p,
+.para p {
+    margin: 0;
+    color: #f8f5f5;
+    line-height: 1.6;
+}
+/* Login / Signup box */
+.main {
+    width: 90%;
+    max-width: 400px;
+    background-color: white;
+    padding: 30px;
+    border: 2px solid black;
+    border-radius: 30px;
+    box-shadow: 10px 15px 20px black;
+    opacity: 1;
+}
+/* Heading */
+.head {
+    text-align: center;
+    margin-bottom: 25px;
+    
+}
+.head h2 {
+    color: #333;
+}
+
+/* Form */
+.form {
+    margin-bottom: 20px;
+}
+.form label {
+    display: block;
+    margin-bottom: 6px;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.form input {
+    margin-bottom: 10px;
+}
+
+/* Signup/Login text */
+
+.signup-text {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.signup-text a {
+    text-decoration: none;
+    font-weight: bold;
+}
+.signup-text a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 576px) {
+    body {
+        background-image: url(/assets/mble.jpeg);
+        background-size: contain;
+       background-repeat: repeat-y;
+    }
+    /* Top description */
+.dis, .para {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    padding: 15px 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+     background-color: rgb(28, 25, 223);
+}
+}

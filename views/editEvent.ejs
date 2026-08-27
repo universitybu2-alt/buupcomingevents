@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+<link rel="icon" type="image/png" href="/assets/icon2.png">
+<title>Edit-Event</title>
+    <link
+        rel="stylesheet"
+        href="/css/bootstrap.min.css"
+    >
+    <link
+        rel="stylesheet"
+        href="/css/editEvent.css"
+    >
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="edit-page">
+
+    <div class="edit-card">
+
+
+        <!-- Icon -->
+
+        <div class="edit-icon">
+
+            <i class="bi bi-pencil-square"></i>
+
+        </div>
+
+
+        <!-- Heading -->
+
+        <h1>Edit Event</h1>
+
+        <p class="edit-subtitle">
+            Update the details of your event
+        </p>
+        <!-- Form -->
+        <form
+            action="/event/<%= event._id %>/edit"
+            method="POST"
+        >
+            <!-- Event Name -->
+
+            <div class="form-group">
+
+                <label for="event_name">
+
+                    <i class="bi bi-calendar-event"></i>
+
+                    Event Name
+
+                </label>
+
+                <input
+                    type="text"
+                    id="event_name"
+                    name="event_name"
+                    value="<%= event.event_name %>"
+                    required
+                >
+
+            </div>
+            <!-- Description -->
+
+            <div class="form-group">
+
+                <label for="description">
+
+                    <i class="bi bi-card-text"></i>
+
+                    Description
+
+                </label>
+
+                <textarea
+                    id="description"
+                    name="description"
+                    rows="4"
+                    required
+                ><%= event.description %></textarea>
+
+            </div>
+
+
+            <!-- Date + Time -->
+
+            <div class="form-row">
+
+
+                <!-- Date -->
+
+                <div class="form-group">
+
+                    <label for="date">
+
+                        <i class="bi bi-calendar3"></i>
+
+                        Date
+
+                    </label>
+
+                    <input
+                        type="date"
+                        id="date"
+                        name="date"
+                        value="<%= event.date %>"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Time -->
+
+                <div class="form-group">
+
+                    <label for="time">
+
+                        <i class="bi bi-clock"></i>
+                        Time
+                    </label>
+
+                    <input
+                        type="time"
+                        id="time"
+                        name="time"
+                        value="<%= event.time %>"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- Venue -->
+
+            <div class="form-group">
+
+                <label for="venue">
+
+                    <i class="bi bi-geo-alt"></i>
+
+                    Venue
+
+                </label>
+
+                <input
+                    type="text"
+                    id="venue"
+                    name="venue"
+                    value="<%= event.venue %>"
+                    required
+                >
+            </div>
+<!-- Organizer -->
+
+<div class="form-group">
+
+    <label for="organizer">
+
+        <i class="bi bi-person-badge"></i>
+
+        Organized By
+
+    </label>
+
+    <input
+        type="text"
+        id="organizer"
+        name="organizer"
+        value="<%= event.organizer || event.oraganizer || '' %>"
+        placeholder="Enter organizer name"
+        required
+    >
+
+</div>
+            <!-- Buttons -->
+
+            <div class="form-buttons">
+
+                <a
+                    href="/home"
+                    class="cancel-btn"
+                >
+
+                    <i class="bi bi-x-circle"></i>
+
+                    Cancel
+
+                </a>
+
+
+                <button
+                    type="submit"
+                    class="update-btn"
+                >
+
+                    <i class="bi bi-check-circle-fill"></i>
+
+                    Update Event
+
+                </button>
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<script src="/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

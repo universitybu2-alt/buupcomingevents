@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+<link rel="icon" type="image/png" href="/assets/icon2.png">
+<title>Bundelkhand University Upcoming Events</title>
+    <link
+        rel="stylesheet"
+        href="/css/bootstrap.min.css"
+    >
+    <link
+        rel="stylesheet"
+        href="/css/home.css"
+    >
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+</head>
+<body>
+<!-- ================= HEADER ================= -->
+<header class="simple-header">
+
+    <div class="header-image">
+        <img
+            src="\assets\logo.jpeg"
+            alt="Bundelkhand University Jhansi"
+        >
+    </div>
+
+    <div class="header-content">
+
+        <h1>
+            Upcoming Events
+            <span>in Bundelkhand University Jhansi</span>
+        </h1>
+
+        <p class="running-text">
+            ✦ Welcome to Bundelkhand University Jhansi —
+            Discover upcoming events, workshops, seminars,
+            cultural activities and exciting opportunities.
+            Stay connected and participate! ✦
+        </p>
+
+    </div>
+
+</header>
+<!-- =====================================
+     EVENTS
+===================================== -->
+
+<main class="events-container">
+    <% if (eventdetails.length === 0) { %>
+        <div class="empty-events">
+            <i class="bi bi-calendar-x"></i>
+            <h4>No events available</h4>
+            <p>
+                Create a new event to get started.
+            </p>
+
+        </div>
+
+
+    <% } %>
+    <% for (let event of eventdetails) { %>
+
+        <!-- EVENT CARD -->
+        <div class="event-card">
+            <!-- Top section -->
+
+            <div class="event-card-header">
+                <!-- Event Name -->
+                <h2 class="event-name">
+                    <%= event.event_name %>
+
+                </h2>
+                <!-- Edit -->
+                <a
+                    href="/event/<%= event._id %>/edit"
+                    class="edit-btn"
+                    title="Edit Event"
+                >
+
+                    <i class="bi bi-pencil-square"> </i> Edit
+
+                </a>
+            </div>
+
+
+
+            <!-- Event Details -->
+
+            <div class="event-details">
+
+
+                <p>
+
+                    <i class="bi bi-info-circle"></i>
+
+                    <%= event.description %>
+
+                </p>
+
+
+                <p>
+
+                    <i class="bi bi-calendar-event"></i>
+
+                    <strong>Date:</strong>
+
+                    <%= event.date %>
+
+                </p>
+<p>
+    <i class="bi bi-clock"></i>
+
+    <strong>Time:</strong>
+
+    <%= new Date('1970-01-01T' + event.time).toLocaleTimeString('en-US', {
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true
+    }) %>
+
+</p>
+
+
+                <p>
+
+                    <i class="bi bi-geo-alt"></i>
+
+                    <strong>Venue:</strong>
+
+                    <%= event.venue %>
+
+                </p>
+                <p>
+    <i class="bi bi-person-badge"></i>
+    <strong>Organized By:</strong>
+    <%= event.organizer %>
+</p>
+
+            </div>
+            <!-- Bottom Buttons -->
+            <div class="event-actions">
+                <!-- Participate -->
+                <a
+                    href="/event/<%= event._id %>/participate"
+                    class="btn btn-primary"
+                >
+
+                    <i class="bi bi-person-plus-fill"></i>
+
+                    Participate
+
+                </a>
+                <!-- Participants -->
+                <a
+                    href="/event/<%= event._id %>/participants"
+                    class="btn btn-outline-primary"
+                >
+
+                    <i class="bi bi-people-fill"></i>
+                    View Participants
+                </a>
+            </div>
+            <!-- Delete -->
+            <div class="delete-container">
+                <form
+                    action="/event/<%= event._id %>/delete"
+                    method="POST"
+
+                    onsubmit="
+                        return confirm(
+                            'Are you sure you want to delete this event?'
+                        );
+                    "
+                >
+
+                    <button
+                        type="submit"
+                        class="delete-btn"
+                        title="Delete Event"
+                    >
+                        <i class="bi bi-trash3-fill"></i>
+                        Delete Event
+                    </button>
+
+                </form>
+
+
+            </div>
+
+
+        </div>
+
+
+    <% } %>
+
+
+</main>
+
+
+
+<!-- =====================================
+     NEW EVENT BUTTON
+===================================== -->
+
+<a
+    href="/newevent"
+    class="new-event-btn"
+    title="Create New Event"
+>
+
+    <i class="bi bi-plus-lg"></i>
+
+    <span>
+        New Event
+    </span>
+
+</a>
+
+
+
+<!-- =====================================
+     SIGN OUT
+===================================== -->
+
+<a
+    href="/logout"
+    class="logout-btn"
+    title="Sign Out"
+>
+    <i class="bi bi-box-arrow-right"></i>
+    <span>
+        Sign Out
+    </span>
+</a>
+<script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

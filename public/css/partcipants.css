@@ -1,0 +1,347 @@
+/* =================================
+   PAGE
+================================= */
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #f5f7fb;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.participants-page {
+    padding-top: 45px;
+    padding-bottom: 50px;
+}
+
+
+/* =================================
+   EVENT HEADING
+================================= */
+
+.event-heading {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.heading-icon {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background: linear-gradient(
+        135deg,
+        #6f42c1,
+        #0d6efd
+    );
+
+    color: white;
+    font-size: 28px;
+
+    box-shadow:
+        0 8px 20px rgba(111, 66, 193, 0.25);
+}
+
+.small-title {
+    margin: 0 0 4px;
+
+    color: #6f42c1;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.event-heading h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 800;
+    background: linear-gradient(
+        90deg,
+        #6f42c1,
+        #0d6efd,
+        #d63384
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+/* =================================
+   PARTICIPANT COUNT
+================================= */
+
+.participant-count {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 15px;
+
+    margin-bottom: 20px;
+
+    border-radius: 20px;
+
+    background: #e9e2ff;
+
+    color: #6f42c1;
+
+    font-weight: 600;
+    font-size: 14px;
+}
+
+
+/* =================================
+   TABLE BOX
+================================= */
+
+.table-container {
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.08);
+
+    border: 1px solid #e9ecef;
+}
+
+.participant-table {
+    margin: 0;
+
+    vertical-align: middle;
+}
+
+
+/* =================================
+   TABLE HEADER
+================================= */
+
+.participant-table thead {
+    background: linear-gradient(
+        90deg,
+        #6f42c1,
+        #0d6efd
+    );
+
+    color: white;
+}
+
+.participant-table thead th {
+    padding: 16px 15px;
+
+    border: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.participant-table thead th i {
+    margin-right: 5px;
+}
+
+
+/* =================================
+   TABLE BODY
+================================= */
+
+.participant-table tbody td {
+    padding: 15px;
+
+    border-color: #eee;
+
+    color: #555;
+}
+
+.participant-table tbody tr {
+    transition: 0.2s;
+}
+
+.participant-table tbody tr:hover {
+    background: #f8f5ff;
+
+    transform: scale(1.002);
+}
+
+
+/* =================================
+   NUMBER
+================================= */
+
+.number-badge {
+    width: 30px;
+    height: 30px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eee7ff;
+
+    color: #6f42c1;
+
+    font-weight: 700;
+
+    font-size: 13px;
+}
+
+
+/* =================================
+   NAME
+================================= */
+
+.name-cell {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #222;
+}
+
+.person-icon {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e9f2ff;
+
+    color: #0d6efd;
+}
+
+
+/* =================================
+   YEAR BADGE
+================================= */
+
+.year-badge {
+    display: inline-block;
+
+    padding: 5px 12px;
+
+    border-radius: 15px;
+
+    background: #e8f5e9;
+
+    color: #198754;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* =================================
+   EMPTY PARTICIPANTS
+================================= */
+
+.empty-box {
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 70px 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.07);
+}
+
+.empty-box i {
+    font-size: 55px;
+
+    color: #6f42c1;
+}
+
+.empty-box h3 {
+    margin-top: 15px;
+
+    font-weight: 700;
+}
+
+.empty-box p {
+    color: #777;
+}
+
+
+/* =================================
+   BACK BUTTON
+================================= */
+
+.back-button {
+    margin-top: 25px;
+}
+
+.back-button .btn {
+    padding: 10px 20px;
+
+    border-radius: 9px;
+
+    background: linear-gradient(
+        135deg,
+        #6f42c1,
+        #0d6efd
+    );
+
+    border: none;
+
+    box-shadow:
+        0 5px 15px rgba(13, 110, 253, 0.2);
+}
+
+.back-button .btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(13, 110, 253, 0.3);
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 576px) {
+
+    .participants-page {
+        padding: 25px 15px;
+    }
+    .event-heading h1 {
+        font-size: 25px;
+    }
+
+    .heading-icon {
+        width: 52px;
+        height: 52px;
+
+        font-size: 22px;
+    }
+    .participant-table {
+        min-width: 150px;
+    }
+}

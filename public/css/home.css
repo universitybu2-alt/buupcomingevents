@@ -1,0 +1,343 @@
+/* =========================
+   GENERAL
+========================= */
+body {
+    margin: 0;
+    padding: 0;
+    background: #f5f7fb;
+    font-family: Arial, sans-serif;
+}
+/* =========================
+   SIMPLE FANCY HEADER
+========================= */
+.simple-header {
+    width: 100%;
+    padding: 25px 40px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: rgb(197, 197, 221);
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+/* University picture */
+.header-image img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid #0b0713;
+    box-shadow: 0 4px 15px rgba(111, 66, 193, 0.25);
+}
+/* Heading */
+.header-content {
+    flex: 1;
+    overflow: hidden;
+}
+.header-content h1 {
+    margin: 0;
+    font-size: 38px;
+    font-weight: 800;
+    color: #222;
+    letter-spacing: -1px;
+}
+/* Fancy part */
+.header-content h1 span {
+    background:
+        linear-gradient(
+            90deg,
+            #6f42c1,
+            #0d6efd,
+            #d63384
+        );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+/* Running paragraph */
+.running-text {
+    margin: 8px 0 0;
+    color: #666;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: textMove 18s linear infinite;
+}
+@keyframes textMove {
+
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+/* Mobile */
+@media (max-width: 600px) {
+    .simple-header {
+        padding: 20px;
+        gap: 15px;
+    }
+    .header-image img {
+        width: 65px;
+        height: 65px;
+    }
+    .header-content h1 {
+        font-size: 22px;
+    }
+    .running-text {
+        font-size: 11px;
+    }
+}
+/* =========================
+   EVENTS CONTAINER
+========================= */
+
+.events-container {
+    width: 100%;
+    padding: 25px;
+    display: grid;
+    grid-template-rows:repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+/* =========================
+   EVENT CARD
+========================= */
+.event-card {
+    background: rgb(188, 210, 238);
+    border-radius: 15px;
+    padding: 20px;
+    min-height: 300px;
+     box-shadow: 5px 5px 10px black;
+    transition: 0.25s;
+    position: relative;
+    color: white;
+}
+.event-card:hover {
+    transform: translateY(-4px);
+}
+/* =========================
+   CARD HEADER
+========================= */
+
+.event-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.event-name {
+    margin-left: 50%;
+    font-size: 30px;
+    font-weight: 700;
+    color: #2c3e46;
+    border: 1px solid black;
+    box-shadow: 5px 10px 10px black;
+}
+
+
+/* =========================
+   EDIT BUTTON
+========================= */
+
+.edit-btn {
+    width: 60px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: inherit;
+    color: #0d6efd;
+    text-decoration: none;
+    transition: 0.2s;
+}
+.edit-btn:hover {
+    background: #0d6efd;
+    color: white;
+}
+/* =========================
+   EVENT DETAILS
+========================= */
+
+.event-details {
+    color: #555;
+    min-height: 140px;
+}
+.event-details p {
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+.event-details i {
+    color: #0d6efd;
+    margin-right: 8px;
+}
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.event-actions {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+.event-actions .btn {
+    flex: 1;
+
+    font-size: 14px;
+
+    border-radius: 8px;
+}
+
+
+/* =========================
+   DELETE
+========================= */
+
+.delete-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+.delete-btn {
+    border: none;
+    background: transparent;
+    color: #f00018;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.delete-btn:hover {
+    background-color: #ff021b;
+    color: white;
+    border-radius: 10px;
+}
+
+.delete-btn i {
+    margin-right: 5px;
+}
+
+
+/* =========================
+   NEW EVENT FIXED BUTTON
+========================= */
+
+.new-event-btn {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    background: #198754;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 13px 20px;
+
+    border-radius: 50px;
+
+    display: flex;
+
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+
+    transition: 0.2s;
+}
+
+.new-event-btn:hover {
+    background: #157347;
+
+    color: white;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   SIGN OUT FIXED BUTTON
+========================= */
+
+.logout-btn {
+    position: fixed;
+
+    left: 25px;
+    bottom: 25px;
+
+    background: #dc3545;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 13px 20px;
+
+    border-radius: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.2);
+
+    z-index: 999;
+
+    transition: 0.2s;
+}
+
+.logout-btn:hover {
+    background: #bb2d3b;
+
+    color: white;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px) {
+    .events-container {
+        padding: 15px;
+
+        grid-template-columns: 1fr;
+    }
+    .top-header {
+        padding: 0 15px;
+    }
+
+    .event-actions {
+        flex-direction: column;
+    }
+
+    .event-actions .btn {
+        width: 100%;
+    }
+    .event-name {
+    margin-left: 0;
+    }
+
+}

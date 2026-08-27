@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+ <link rel="icon" type="image/png" href="/assets/icon2.png">
+    <title>Do Participate</title>
+    <link
+        rel="stylesheet"
+        href="/css/bootstrap.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="\css\participate.css"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="participate-page">
+
+
+    <div class="participate-card">
+
+
+        <!-- Icon -->
+
+        <div class="form-icon">
+
+            <i class="bi bi-person-plus-fill"></i>
+
+        </div>
+
+
+        <!-- Heading -->
+
+        <h1>
+            Participate
+        </h1>
+
+
+        <h2>
+            <%= event.event_name %>
+        </h2>
+
+
+        <p class="form-subtitle">
+            Enter your details to participate in this event.
+        </p>
+
+
+
+        <!-- Form -->
+
+        <form
+            action="/event/<%= event._id %>/participate"
+            method="POST"
+        >
+
+
+            <!-- Name -->
+
+            <div class="form-group">
+
+                <label for="name">
+                    <i class="bi bi-person"></i>
+                    Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- Department -->
+
+            <div class="form-group">
+
+                <label for="dept">
+                    <i class="bi bi-building"></i>
+                    Department
+                </label>
+
+                <input
+                    type="text"
+                    id="dept"
+                    name="dept"
+                    placeholder="Enter your department"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- Branch -->
+
+            <div class="form-group">
+
+                <label for="branch">
+                    <i class="bi bi-diagram-3"></i>
+                    Branch
+                </label>
+
+                <input
+                    type="text"
+                    id="branch"
+                    name="branch"
+                    placeholder="Enter your branch"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- Current Year -->
+
+            <div class="form-group">
+
+                <label for="curr_year">
+                    <i class="bi bi-mortarboard"></i>
+                    Current Year
+                </label>
+
+                <input
+                    type="text"
+                    id="curr_year"
+                    name="curr_year"
+                    placeholder="Example: 2nd Year"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- Submit -->
+
+            <button
+                type="submit"
+                class="participate-btn"
+            >
+
+                <i class="bi bi-check-circle-fill"></i>
+
+                Participate
+
+            </button>
+
+
+        </form>
+
+
+
+        <!-- Back -->
+
+        <a
+            href="/home"
+            class="back-link"
+        >
+
+            <i class="bi bi-arrow-left"></i>
+
+            Back to Events
+
+        </a>
+
+
+    </div>
+
+</div>
+
+
+<script src="/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

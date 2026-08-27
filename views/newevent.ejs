@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/assets/icon2.png">
+    <title>Create New Event</title>
+    <link rel="stylesheet" href="/css/newevent.css">
+</head>
+<body>
+    <div class="event-container">
+    <img 
+        src="/assets/logo.jpeg";
+        alt="University Logo" 
+        class="event-logo"
+    >
+        <h1 class="event-title">Create New Event</h1>
+
+        <form class="event-form" action="/newevent" method="post">
+
+            <label for="eventname">Event Name</label>
+            <input
+                type="text"
+                id="eventname"
+                name="eventname"
+                placeholder="Enter event name"
+                required
+            >
+
+            <label for="description">Description</label>
+            <input
+                type="text"
+                id="description"
+                name="description"
+                placeholder="Enter event description"
+                required
+            >
+
+            <label for="time">Event Time</label>
+            <input
+                type="time"
+                id="time"
+                name="time"
+                placeholder="Enter event time"
+                required
+            >
+
+            <label for="date">Event Date</label>
+            <input
+                type="date"
+                id="date"
+                name="date"
+                required
+            >
+
+            <label for="venue">Event Venue</label>
+            <input
+                type="text"
+                id="venue"
+                name="venue"
+                placeholder="Enter event venue"
+                required
+            >
+            <label for="organizer">Event Organizer</label>
+            <input
+                type="text"
+                id="organizer"
+                name="organizer"
+                placeholder="Enter event organizer"
+                required
+            >
+            <button type="submit">Submit Event</button>
+        </form>
+    </div>
+</body>
+</html>

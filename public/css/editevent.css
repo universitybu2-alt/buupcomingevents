@@ -1,0 +1,347 @@
+/* =====================================
+   PAGE
+===================================== */
+
+body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f5f7fb,
+            #e9e2ff
+        );
+}
+
+
+/* =====================================
+   CENTER PAGE
+===================================== */
+
+.edit-page {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px 15px;
+}
+
+
+/* =====================================
+   EDIT CARD
+===================================== */
+
+.edit-card {
+
+    width: 100%;
+
+    max-width: 600px;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.12);
+
+    border: 1px solid #eee;
+}
+
+
+/* =====================================
+   ICON
+===================================== */
+
+.edit-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6f42c1,
+            #0d6efd
+        );
+
+    color: white;
+
+    font-size: 28px;
+
+    box-shadow:
+        0 8px 20px
+        rgba(111, 66, 193, 0.25);
+}
+
+
+/* =====================================
+   HEADING
+===================================== */
+
+.edit-card h1 {
+
+    margin: 0;
+
+    text-align: center;
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    color: #222;
+}
+
+
+.edit-subtitle {
+
+    text-align: center;
+
+    color: #777;
+
+    font-size: 14px;
+
+    margin-top: 7px;
+
+    margin-bottom: 28px;
+}
+
+
+/* =====================================
+   FORM
+===================================== */
+
+.form-group {
+
+    margin-bottom: 18px;
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #444;
+}
+
+
+.form-group label i {
+
+    color: #6f42c1;
+
+    margin-right: 5px;
+}
+
+
+/* =====================================
+   INPUT + TEXTAREA
+===================================== */
+
+.form-group input,
+.form-group textarea {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 12px 14px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    font-family: Arial, sans-serif;
+
+    transition: 0.2s;
+
+    background: #fff;
+}
+
+
+.form-group textarea {
+
+    resize: vertical;
+
+    min-height: 100px;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+
+    border-color: #6f42c1;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(111, 66, 193, 0.12);
+}
+
+
+/* =====================================
+   DATE + TIME ROW
+===================================== */
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+
+/* =====================================
+   BUTTONS
+===================================== */
+
+.form-buttons {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+
+.cancel-btn,
+.update-btn {
+
+    flex: 1;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+
+/* Cancel */
+
+.cancel-btn {
+
+    color: #555;
+
+    background: #f1f1f1;
+
+    border: 1px solid #ddd;
+}
+
+
+.cancel-btn:hover {
+
+    background: #e5e5e5;
+
+    color: #333;
+}
+
+
+/* Update */
+
+.update-btn {
+
+    border: none;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6f42c1,
+            #0d6efd
+        );
+
+    box-shadow:
+        0 7px 18px
+        rgba(13, 110, 253, 0.25);
+}
+
+
+.update-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(13, 110, 253, 0.35);
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+
+    .edit-card {
+
+        padding: 25px 20px;
+
+        border-radius: 15px;
+    }
+
+
+    .edit-card h1 {
+
+        font-size: 26px;
+    }
+
+
+    .form-row {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+
+    .form-buttons {
+
+        flex-direction: column;
+    }
+
+}

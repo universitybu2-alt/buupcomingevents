@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+ <link rel="icon" type="image/png" href="/assets/icon2.png">
+<title>Participants Details</title>
+    <link
+        rel="stylesheet"
+        href="/css/bootstrap.min.css"
+    >
+    <link
+        rel="stylesheet"
+        href="\css\partcipants.css"
+    >
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+</head>
+<body>
+
+    <div class="container participants-page">
+
+
+        <!-- Event Heading -->
+
+        <div class="event-heading">
+
+            <div class="heading-icon">
+                <i class="bi bi-calendar-event"></i>
+            </div>
+
+            <div>
+
+                <p class="small-title">
+                    EVENT PARTICIPANTS
+                </p>
+
+                <h1>
+                    <%= event.event_name %>
+                </h1>
+
+            </div>
+
+        </div>
+
+
+        <!-- Participant Count -->
+
+        <div class="participant-count">
+
+            <i class="bi bi-people-fill"></i>
+
+            <%= event.participants.length %>
+            Participants
+
+        </div>
+
+
+        <% if (event.participants.length === 0) { %>
+
+
+            <!-- No Participants -->
+
+            <div class="empty-box">
+
+                <i class="bi bi-person-x"></i>
+
+                <h3>
+                    No Participants Yet
+                </h3>
+
+                <p>
+                    Nobody has registered for this event yet.
+                </p>
+
+            </div>
+
+
+        <% } else { %>
+
+
+            <!-- Participants Table -->
+
+            <div class="table-container">
+
+                <div class="table-responsive">
+
+                    <table class="table participant-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>#</th>
+
+                                <th>
+                                    <i class="bi bi-person"></i>
+                                    Name
+                                </th>
+                                <th>
+                                    <i class="bi bi-building"></i>
+                                    Department
+                                </th>
+
+                                <th>
+                                    <i class="bi bi-diagram-3"></i>
+                                    Branch
+                                </th>
+
+                                <th>
+                                    <i class="bi bi-mortarboard"></i>
+                                    Year
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <% event.participants.forEach((participant, index) => { %>
+
+                                <tr>
+
+                                    <td>
+                                        <span class="number-badge">
+                                            <%= index + 1 %>
+                                        </span>
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="name-cell">
+
+                                            <div class="person-icon">
+                                                <i class="bi bi-person-fill"></i>
+                                            </div>
+
+                                            <strong>
+                                                <%= participant.name %>
+                                            </strong>
+
+                                        </div>
+
+                                    </td>
+                                    <td>
+                                        <%= participant.dept || "N/A" %>
+                                    </td>
+                                    <td>
+                                        <%= participant.branch || "N/A" %>
+                                    </td>
+                                    <td>
+
+                                        <span class="year-badge">
+
+                                            <%= participant.curr_year || "N/A" %>
+
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+                            <% }) %>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+        <% } %>
+
+
+        <!-- Back Button -->
+
+        <div class="back-button">
+
+            <a
+                href="/home"
+                class="btn btn-primary"
+            >
+
+                <i class="bi bi-arrow-left"></i>
+
+                Back to Events
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="/assets/icon2.png">
+<title>Signup-page</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/loginsignup.css">
+</head>
+<body>
+    <!-- Description at top -->
+    <div class="para text-center">
+        <p>
+            Please sign up to get information about upcoming events.
+        </p>
+    </div>
+
+    <!-- Signup box -->
+    <div class="main">
+        <!-- Logo inside login box -->
+        <div class="logo-box">
+            <img
+                src="/assets/logo.jpeg"
+                alt="Bundelkhand University Logo"
+                class="event-logo"
+            >
+        </div>
+        <h2 class="head">Signup</h2>
+
+        <form action="/signup" method="POST">
+
+            <div class="form">
+
+                <label for="email">Email:</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="username"
+                    placeholder="Enter your email"
+                    class="form-control"
+                    required
+                >
+
+                <label for="password">Password:</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    class="form-control"
+                    required
+                >
+
+            </div>
+
+            <button type="submit" class="btn btn-success w-100">
+                Sign Up
+            </button>
+
+        </form>
+
+        <!-- Login option at bottom -->
+        <p class="signup-text">
+            Already have an account?
+            <a href="/">Login</a>
+        </p>
+    </div>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
