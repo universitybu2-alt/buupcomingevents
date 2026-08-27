@@ -1,4 +1,5 @@
 const session = require("express-session");
+const MongoStore = require("connect-mongo");
 require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
@@ -14,7 +15,13 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(session({
   secret: process.env.SESSION_SECRET,
   resave: false,
-  saveUninitialized: false
+  saveUninitialized: false,
+  store: MongoStore.create({
+    mongoUrl: process.env.MONGO_URL
+  }),
+  cookie: {
+    maxAge: 1000 * 60 * 60 * 24
+  }
 }));
 // MongoDB connection
 async function main() {
