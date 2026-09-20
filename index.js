@@ -176,7 +176,8 @@ app.post("/event/:id/participate", isLoggedIn, async (req, res) => {
       name: req.body.name,
       dept: req.body.dept,
       branch: req.body.branch,
-      curr_year: req.body.curr_year
+      curr_year: req.body.curr_year,
+       performance: req.body.performance
     });
     await event.save();
     res.redirect("/home");
