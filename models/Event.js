@@ -32,7 +32,8 @@ const eventSchema = new mongoose.Schema(
       name: String,
       dept: String,
       branch: String,
-      curr_year: String
+      curr_year: String,
+      performance: String
     }
   ]
   },
